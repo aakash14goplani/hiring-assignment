@@ -1,0 +1,135 @@
+/* global stylings start */
+:root {
+  --light-black: #383838;
+  --white: #ffffff;
+  --light-blue: #51b8e1;
+  --light-gray: #808080;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* global stylings ends */
+
+/* header stylings start */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-black);
+  padding: 1rem;
+}
+
+.header-container h1 {
+  color: var(--white);
+}
+
+.header-container nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-container nav button {
+  padding: 0.5rem;
+  margin: 0.5rem 1rem 0.5rem 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.header-container__btn-secondary {
+  background-color: var(--light-blue);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.header-container__btn-link {
+  background: none;
+  color: var(--light-blue);
+  font-weight: 500;
+}
+
+/* header stylings end */
+
+/* body stylings start */
+.main-container {
+  padding: 2rem 1rem;
+}
+
+.main-container__text {
+  margin-bottom: 1rem;
+}
+
+.main-container__text p {
+  text-align: justify;
+}
+
+.main-container__table {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container__table__row {
+  border-top: 1px solid var(--light-black);
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container__table__row--label {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.main-container__table__row--info,
+.main-container__table__row--price {
+  padding: 0.1rem 0;
+}
+
+.main-container__table__row:last-of-type {
+  border-bottom: 1px solid var(--light-black);
+  padding-bottom: 1rem;
+}
+
+/* body stylings end */
+
+/* footer stylings start */
+
+.footer-container {
+  text-align: center;
+  background-color: var(--light-gray);
+  color: var(--white);
+  padding: 1rem;
+  font-weight: 500;
+}
+
+/* footer stylings end */
+
+/* Tablet and Desktop screen starts */
+@media screen and (min-width: 768px) {
+  /* header stylings start */
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  /* header stylings ends */
+
+  /* body stylings starts */
+  .main-container__table__row {
+    padding-top: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .main-container__table__row--label {
+    padding-top: 0;
+  }
+  /* body stylings ends */
+}
